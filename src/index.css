@@ -3,7 +3,8 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color: rgba(255, 255, 255, 0.87);
+  color: #e0e0e0; /* Crisp off-white for readability on dark backgrounds */
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); /* Matches App.css dark gradient */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,15 +14,28 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-
+  min-height: 100vh; /* Ensures the background fills the viewport */
 }
 
 .card {
   padding: 2em;
+  background-color: #252525; /* Dark, sleek card background */
+  border: 1px solid #3a3a3a; /* Subtle border for definition */
+  border-radius: 8px; /* Rounded corners for modernity */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Floating effect */
+  color: #e0e0e0; /* Matches text color */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px); /* Slight lift on hover */
+  box-shadow: 0 6px 18px rgba(255, 62, 108, 0.2); /* Pinkish glow to tie in with App.css */
 }
 
 .read-the-docs {
-  color: #888;
+  color: #b0b0b0; /* Softer gray for secondary text, matching description in App.css */
+  font-weight: 500;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Subtle depth */
 }
 
 .box:nth-child(3n + 1) {
@@ -32,4 +46,9 @@
 }
 .box:nth-child(3n + 3) {
   grid-column: 3;
+}
+
+/* Optional: Add a hover effect for .box if it’s interactive */
+.box:hover {
+  border-color: #ff3e6c; /* Neon pink accent to tie into the theme */
 }
