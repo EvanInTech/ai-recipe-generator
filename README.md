@@ -1,5 +1,22 @@
-# Serverless Recipe Generator Web Application
-I developed a serverless web application that leverages AWS Amplify and Amazon Bedrock to generate creative recipes from user-submitted ingredients. Using AWS Amplify, I built and hosted a frontend with an HTML-based interface for ingredient input, integrated with continuous deployment via GitHub. The backend, powered by AWS Lambda and AWS AppSync’s GraphQL API, processes requests and connects to Amazon Bedrock’s Claude 3 Sonnet model for AI-driven recipe generation. I configured Amplify Auth with AWS Cognito for secure user access and enabled Bedrock foundation model integration. This beginner-friendly project, completed in 35 minutes using Node.js and npm, showcases my skills in serverless architecture, cloud services, and generative AI within AWS’s Free Tier.
+# AI Recipe Generator
 
+Serverless web app that turns user-submitted ingredients into recipes using **AWS Amplify** and **Amazon Bedrock** (Claude 3 Sonnet).
+
+## What it does
+- HTML/Amplify frontend for ingredient input, with continuous deployment from GitHub
+- **AWS Lambda** + **AppSync** (GraphQL) to process requests
+- **Amazon Bedrock** for AI recipe generation
+- **Amplify Auth / Cognito** for signed-in access
+
+## Live demo
 https://main.d3sjg76q9l66pz.amplifyapp.com
 
+## Stack
+`AWS Amplify` · `Cognito` · `Lambda` · `AppSync` · `Bedrock` · `Node.js`
+
+## What I’d harden next
+- Tighter authorization and input validation on the GraphQL path
+- Structured logging / monitoring (CloudWatch) and cost controls on Bedrock calls
+- Clearer IAM least-privilege for Amplify backend roles
+
+Built as a focused AWS serverless + generative AI demo (Free Tier–friendly). Not a production certification platform — see [aws-productized-services](https://github.com/EvanInTech/aws-productized-services) and [my site](https://evanintech.carrd.co/) for broader DevSecOps / secure platform work.
